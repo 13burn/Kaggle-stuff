@@ -25,5 +25,27 @@ sales = pd.Series([30, 35, 40.2], index=['2015 Sales', '2016 Sales', '2017 Sales
 print(sales)
 """
 
-fruit_prices = pd.read_csv("data\Fruit_Prices_2020.csv")
-print(fruit_prices.head() )
+fruit_prices = pd.read_csv("data\Fruit_Prices_2020.csv")# index_col=0
+
+#titles are Fruit,Form,RetailPrice,RetailPriceUnit,Yield,CupEquivalentSize,CupEquivalentUnit,CupEquivalentPrice
+#print(fruit_prices)
+#print(fruit_prices.iloc[2] )
+#print(len(fruit_prices ))
+"""
+for fr in range(len(fruit_prices)):
+    if fruit_prices.iloc[fr].RetailPrice > 5:
+        print(fruit_prices.iloc[fr].Fruit, fruit_prices.iloc[fr].Form)
+
+"""
+
+#print(fruit_prices.iloc[0:3, :4])
+#print(fruit_prices.sample()) #this one selects a random row
+#print(fruit_prices.iloc[[2,4,6], 0:5])#to index specific rows
+#print(fruit_prices.iloc[-2, :] )
+print(type(fruit_prices))
+#print(fruit_prices.loc[:, ["Fruit", "Form", "RetailPrice"] ])
+#print(fruit_prices.loc[fruit_prices.RetailPrice > 6, ["Fruit", "Form", "RetailPrice"]] )
+print(sum(fruit_prices.RetailPrice>5))#using len returns ALL the resutls, True or False
+
+#print(dir(fruit_prices.Fruit))
+#print(sum((fruit_prices.RetailPrice>5)  ))

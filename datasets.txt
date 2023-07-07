@@ -1,0 +1,7 @@
+The DATASETS used can be found here>>
+
+#Fruits and vegetables prices
+https://www.kaggle.com/datasets/vstacknocopyright/fruit-and-vegetable-prices
+
+#wines 
+https://www.kaggle.com/datasets/zynicide/wine-reviews
